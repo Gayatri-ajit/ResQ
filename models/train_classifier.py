@@ -23,11 +23,11 @@ import pickle
 import sys
 import os
 import sys
-sys.path.append('D:\ResQ\DisasterResponseWorking_PhaseI-master')
+sys.path.append('C:/Users/soory/OneDrive/Desktop/mini_pro/ResQ1/')
 
 # getting the name of the directory
 # where the this file is present.
-current = os.path.dirname(os.path.realpath('D:\ResQ\DisasterResponseWorking_PhaseI-master\models'))
+current = os.path.dirname(os.path.realpath('C:/Users/soory/OneDrive/Desktop/mini_pro/ResQ1/models'))
   
 # Getting the parent directory name
 # where the current directory is present.
@@ -57,7 +57,7 @@ def load_data(database_filepath):
         The function is to load data from database, and assign corrected collumns to X,Y
     
     '''
-    engine = create_engine('sqlite:///D:\ResQ\DisasterResponseWorking_PhaseI-master\data\DisasterResponse.db')
+    engine = create_engine('sqlite:///C:/Users/soory/OneDrive/Desktop/mini_pro/ResQ1/data/DisasterResponse.db')
     df=pd.read_sql_table('message',con=engine)
     X=df['message']
     Y = df.iloc[ : , -36:]
